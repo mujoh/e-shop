@@ -1,0 +1,21 @@
+<h2>Shopping Cart</h2>
+<div class="table-responsive">
+<table id="tablecart" class="table table-bordered">
+<tr>
+<th width="40%">Product Name</th>
+<th width="10%">Quantity</th>
+<th width="20%">Price Details</th>
+<th width="15%">Order Total</th>
+<th width="5%">Action</th>
+</tr>
+    <tr>
+    <td colspan="3" align="right"><strong>Total</strong></td>
+    <td align="right">$ <?php echo number_format($total, 2); ?></td>
+    
+    <td><input type="submit" class="place-order" id="<?=$total;?>" value="Place Order!"></td>
+    
+    </tr>
+    <input type="hidden" id="hidden_name" value="<?php echo $values["item_name"]; ?>">
+    <input type="hidden" id="hidden_quantity" value="<?php echo $values["item_quantity"]; ?>">
+</table>
+</div>
