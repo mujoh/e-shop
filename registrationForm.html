@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Moby Electronic d.o.o.</title>
+
+	<!-- Latest compiled and minified CSS -->
+
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	  <script src="js/skriptaIndex.js"></script> 
+
+	<!-- Google Font -->
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,300,500,700,600' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" type="text/css">
+
+    <!-- Theme Stylesheet -->
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body action="controller/connection.php">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="social pull-left">
+                        <ul>
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="action pull-right">
+                        <ul>
+                            <li><a href="index.php">Home</a></li>
+                    		<li><a href="delivery.php">Delivery</a></li>
+                    		<li><a href="getToUs.php">About Us</a></li>
+							<li><a href="loginform.php">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="header">
+        <div class="container">
+        
+        <div class="navbar-header">
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header" aria-expanded="false">
+
+                <span class="sr-only">Menu</span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+
+              </button>
+
+            </div>
+        
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <div class="logo">
+                        <a href="index.php">
+                            <img src="img/logic.png" alt="Moby Electronic">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-5">
+                    <div class="search-form">
+                        <form class="navbar-form" role="search">
+                            <div class="form-group">
+                              <input type="text" id="search-field" class="form-control" placeholder="Search...">
+                            </div>
+                            <button type="submit" id="search" class="btn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <a href="cart.php"><i class="fa fa-shopping-cart"></i></a>
+                        </div>
+                        <div class="cart-text">
+                            SHOPPING CART
+                            <br>
+                            0 items - 0.00KM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div id="mainBody">
+	<div class="container">
+	<div class="row">
+<!-- Sidebar ================================================== -->
+	<div id="sidebar" class="span3">
+
+		<ul id="sideManu" class="nav nav-tabs nav-stacked">
+			<li class="subMenu open"><a> CATEGORIES</a>
+			</li>
+			
+			<li class="subMenu" id = "smartphones"><a> SMARTPHONES</a>
+				<ul class ="ulID" style="display:none;" data-submenu-id="smartphones">
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Samsung</a></li>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Apple</a></li>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Nokia</a></li>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Sony</a></li>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>LG</a>
+				</ul>
+			</li>
+			<li class="subMenu" id="personal-computer"><a> PERSONAL COMPUTERS</a>
+			<ul class ="ulID" style="display:none;" data-submenu-id="personal-computer">
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>HP</a></li>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>IBM</a></li>												
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Unknown Manufacturer</a></li>												
+			</ul>
+			<li class="subMenu" id = "notebooks"><a>NOTEBOOKS</a>
+				<ul class ="ulID" style="display:none;" data-submenu-id="notebooks">
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>HP</a></li>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>IBM</a></li>												
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Lenovo</a></li>	
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Sony</a></li>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Samsung</a></li>												
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Microsoft</a></li>																						
+			</ul>
+			<li class="subMenu" id = "printers"><a>PRINTERS</a>
+				<ul class ="ulID" style="display:none;" data-submenu-id="printers">
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Samsung</a>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>HP</a>
+				</ul>	
+			</li>
+			<li class="subMenu" id = "equipment"><a>EQUIPMENT</a>
+				<ul class ="ulID" style="display:none;" data-submenu-id="equipment">
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Earphones</a>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Keyboards</a>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Mouses</a>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Cables</a>
+				<li class="unstyled-list-item"><a href="products.html"><i class="icon-chevron-right"></i>Phone Cases</a>
+				</ul>	
+			</li>
+		</ul>
+		</div>
+		
+	<div class="span9">
+		<div class="well">
+		<h3>Registration Form</h3>
+		<hr>
+		<form onsubmit = "return CheckPassword(document.forma.pw)" id = "formica" name = "forma" action = "controller/insertDB.php" method = "POST" style="margin-bottom:30px;">
+		<div class="row">
+		<h4>Personal Info</h4><br>
+			<div class="col-md-2">
+			
+				<div class="form-group">
+					<label for="title">Title</label>
+					<input type="text" class="form-control" name="title" placeholder="Mr.">
+				</div>
+			</div>
+			
+			<div class="col-md-5">
+				<div class="form-group">
+					<label for="fName">First Name</label>
+					<input type="text" class="form-control" name="fName" placeholder="Chee Kin">
+				</div>
+			</div>
+			
+			<div class="col-md-5">
+				<div class="form-group">
+					<label for="lName">Last Name</label>
+					<input type="text" class="form-control" name="lName" placeholder="Lim">
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="Gender">Gender</label>
+					<select class="form-control" name ="gender">
+						<option></option>
+						<option>Male</option>
+						<option>Female</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="dateOfBirth">Date of Birth</label>
+					<input type="date" class="form-control" name="dateOfBirth" placeholder="dd/mm/yyyy">
+				</div>
+			</div>
+			
+			<h4>Your Login Info</h4><br>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="username">Username </label>
+					<input type="text" class="form-control" id = "username" name="uName" placeholder="UserName" required>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="password">Password </label>
+					<input type="password" class="form-control" id = "pass" name="pw" placeholder="Password" required>
+				</div>
+			</div>
+			
+			<h4>Address Info</h4><br>
+			<div class="col-md-12">
+				<div class="form-group">
+					<input type="text" class="form-control" name="street" placeholder="Street" required>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<input type="text" class="form-control" name="city" placeholder="City" required>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<input type="email" class="form-control" id = "email" name="email" placeholder="Email" required>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<input type="text" class="form-control" name="postcode" placeholder="PostCode" required>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<select class="form-control" name="country">
+						<option>Country</option>
+						<option>Bosnia and Herzegovina</option>
+						<option>Croatia</option>
+						<option>Serbia</option>
+						<option>Slovenia</option>
+						<option>Montenegro</option>
+					</select>
+				</div>
+			</div>	
+		</div>
+		
+		<button id ="reset" type ="reset" class="btn-item" style="float:right;">Cancel</button>
+		<button id = "regfinish" type ="submit" class="btn-item"style="float:right; margin-right:10px;">Submit</button>
+		
+	</form>
+	</div>
+	</div>
+	</div>
+</div>
+</div>
+
+<div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <div class="single-widget">
+                        <h2 class="widget-title">Who We Are</h2>
+                        <div class="widget-inner">
+                            <p>Offices: #1 Ulica park bb, G.Vakuf      
+               #2 Sultan Ahmedova, Bugojno</p>
+                            <p>Phone: + (387) 62 116 767</p>
+                            <p>Email: m.hadzimehanovic@gmail.com</p>
+                            <img src="img/payment.png" alt="payment">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="single-widget">
+                        <h2 class="widget-title">Information</h2>
+                        <div class="widget-inner">
+                            <ul>
+                                <li><a href="getToUs.php">Get to Us</a></li>
+                                <li><a href="termsandconditions.php">Terms and Conditions</a></li>
+                                <li><a href="privacypolicy.php">Privacy Policy</a></li>
+                                <li><a href="delivery.php">Delivery Information</a></li>
+                                <li><a href="manufacturers.php">Manufacturers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="single-widget">
+                        <h2 class="widget-title">Our Services</h2>
+                        <div class="widget-inner">
+                            <ul>
+                                <li><a href="">Shipping & Returns</a></li>
+                                <li><a href="">Secure Shopping</a></li>
+                                <li><a href="">International Shipping</a></li>
+                            </ul>
+                        </div>
+                    </div>
+               </div>
+               
+             <!--   <div class="col-md-3 col-sm-3">
+                    <div class="single-widget">
+                        <h2 class="widget-title">Your Account</h2>
+                        <div class="widget-inner">
+                            <ul>
+                                <li><a href="accountinfo.php">Account Info</a></li>
+                                <li><a href="#">Orders</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+		 
+</body>
+</html>
