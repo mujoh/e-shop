@@ -17,6 +17,18 @@
                         <li><a href="index.php">Home</a></li>
                         <li><a href="delivery.php">Delivery</a></li>
                         <li><a href="getToUs.php">About Us</a></li>
+                        <?php	
+                        if(isset($_SESSION['username']))
+                        {
+                            echo '<li><a href="controller/logout.php">Logout</a></li>';
+                            echo '<li>Welcome, '.$_SESSION['username'].'</li>';
+                        }
+                        else
+                        {
+                            echo '<li><a href="loginform.php">Login</a></li>';
+                            echo '<li><a href="registrationForm.html">Register</a></li>';
+                        }
+                     ?>
                     </ul>
                 </div>
             </div>
