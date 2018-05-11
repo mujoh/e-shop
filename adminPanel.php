@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="col-md-7 col-sm-5">
-                    <h1 style="text-align:center; color:white; margin-top:30px;">Welcome, Admin <span style="color:#ffd400;"></span></h1>
+                    <h1 style="text-align:center; color:white; margin-top:30px;">Welcome, Admin <span style="color:#ffd400;"><?= $_SESSION['username'];?></span></h1>
                 </div>
             </div>
         </div>
