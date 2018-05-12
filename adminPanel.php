@@ -161,5 +161,14 @@
 		
 		</div> <!--close well-->
 		</div> <!--Add item end -->
+</div>
+</div>
+</div>
 </body>
-	
+</html>
+<?php
+	}
+	else{
+		echo "cannot access page!";
+	}
+?>
