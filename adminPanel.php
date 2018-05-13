@@ -76,7 +76,7 @@
         <li id="logout"><a href="controller/logout.php">Log Out</a></li>
       </ul><br>
     </div>
-
+	
 	<!--ADD ITEM -->
 	<div class="col-sm-9">
 		<div id="jedan" style="display:none;">
@@ -142,6 +142,20 @@
 			</div>
 		  </div>		  
 		  
+		<!--  <div class="form-group row">
+			<label for="itemcategory" class="col-sm-2 col-form-label">Item Category</label>
+			<div class="col-sm-10">
+				<select class="form-control" required>
+					<option value="">Select Category</option>
+					<option value="1">Smartphone</option>
+					<option value="2">Personal Computer</option>
+					<option value="3">Notebook</option>
+					<option value="4">Printer</option>
+					<option value="5">Equipment</option>
+				  </select>
+			</div>
+		  </div>-->
+		  
 		  <div class="form-group row">
 			<label for="itempicture" class="col-sm-2 col-form-label">Item Picture</label>
 			<div class="col-sm-10">
@@ -161,7 +175,7 @@
 		
 		</div> <!--close well-->
 		</div> <!--Add item end -->
-
+		
 		<!-- List items start -->
 		<div id="dva" style="display:none;">
 			<hr style="border-color:#ddd;">
@@ -206,6 +220,66 @@
 				?>
 			</table>
 		</div>  <!--List items end -->
+		
+		 <!--Update item start-->
+		<div id="tri" style="display:none;">
+			<hr style="border-color:#ddd;">
+			<h2 style="font-weight:bold;margin-top:20px;">List All Orders</h2>
+			<hr style="border-color:#ddd;">
+
+			<table id = "items-table" style="margin-top:50px;" align="center" width="1000" border="2">
+				<tr bgcolor="#ffd400">
+					<td colspan="11" align="center"><h2>ORDERS</h2></td>
+				</tr>
+				<tr align="center">
+					<th style="text-align:center; padding:5px;">Order ID</th>
+					<th style="text-align:center;">User ID</th>
+					<th style="text-align:center;">User Name</th>
+					<th style="text-align:center">User Surname</th>
+					<th style="text-align:center;">User Address</th>
+					<th style="text-align:center;">User City</th>
+					<th style="text-align:center;">User Country</th>
+					<th style="text-align:center;">Item</th>
+					<th style="text-align:center;">Quantity</th>
+					<th style="text-align:center;">Date</th>
+					<th style="text-align:center;">Total</th>
+				</tr>
+				
+				<tr align="center">
+				<?php
+					$queryFetchOrders = "SELECT * FROM orders";
+					$result3 = mysqli_query($con, $queryFetchOrders);
+					while($row = mysqli_fetch_array($result3)){
+					$order_id = $row['id'];
+					$user_id = $row['user_id'];
+					$user_name = $row['name'];
+					$user_surname = $row['surname'];
+					$user_address = $row['address'];
+					$user_city = $row['city'];
+					$user_country = $row['country'];
+					$item = $row['item'];
+					$quantity = $row['quantity'];
+					$date = $row['date'];
+					$total = $row['total'];
+				?>
+				<td style="padding:2px;" align="center"><?php echo $order_id;?></td>
+				<td align="center"><?php echo $user_id;?></td>
+				<td align="center"><?php echo $user_name;?></td>
+				<td align="center"><?php echo $user_surname;?></td>
+				<td align="center"><?php echo $user_address;?></td>
+				<td align="center"><?php echo $user_city;?></td>
+				<td align="center"><?php echo $user_country;?></td>
+				<td align="center"><?php echo $item;?></td>
+				<td align="center"><?php echo $quantity;?></td>
+				<td align="center"><?php echo $date;?></td>
+				<td align="center"><?php echo $total;?></td>
+				</tr>
+				<?php
+				}
+				?>
+			</table>
+		</div> <!--Update item end -->
+	</div> <!-- col-sm-9 end -->
 </div>
 </div>
 </div>
