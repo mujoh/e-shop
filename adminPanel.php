@@ -161,6 +161,51 @@
 		
 		</div> <!--close well-->
 		</div> <!--Add item end -->
+
+		<!-- List items start -->
+		<div id="dva" style="display:none;">
+			<hr style="border-color:#ddd;">
+			<h2 style="font-weight:bold;margin-top:20px;">List All Items</h2>
+			<hr style="border-color:#ddd;">
+
+			<table id = "items-table" style="margin-top:50px;" align="center" width="1000" border="2">
+				<tr bgcolor="#ffd400">
+					<td colspan="7" align="center"><h2>ITEMS</h2></td>
+				</tr>
+				<tr align="center">
+					<th style="text-align:center; padding:5px;">Item ID</th>
+					<th style="text-align:center;">Item Name</th>
+					<th style="text-align:center;">Item Brand</th>
+					<th style="text-align:center">Item Quantity</th>
+					<th style="text-align:center;">Item Price</th>
+					<th style="text-align:center;">Delete Item</th>
+					<th style="text-align:center;">Update Item</th>
+				</tr>
+				
+				<tr align="center">
+				<?php
+					$queryFetchAll = "SELECT * FROM products";
+					$result2 = mysqli_query($con, $queryFetchAll);
+					while($row = mysqli_fetch_array($result2)){
+					$id = $row['product_id'];
+					$name = $row['product_name'];
+					$brand = $row['product_brand'];
+					$price = $row['product_price'];
+					$quantity = $row['product_quantity'];
+				?>
+				<td style="padding:2px;" align="center"><?php echo $id;?></td>
+				<td align="center"><?php echo $name;?></td>
+				<td align="center"><?php echo $brand;?></td>
+				<td align="center"><?php echo $quantity;?></td>
+				<td align="center"><?php echo $price;?> KM</td>
+				<td align="center" class="delete" id="del_<?php echo $id;?>">Delete</td>
+				<td id="<?= $id;?>" class="update-admin" align="center">Update</a></td>
+				</tr>
+				<?php
+				}
+				?>
+			</table>
+		</div>  <!--List items end -->
 </div>
 </div>
 </div>
