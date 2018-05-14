@@ -39,7 +39,10 @@
             </div>
        </div>
        
-        <div class="col-md-3 col-sm-3">
+       <?php
+        if(isset($_SESSION['username']))
+        {
+            echo '<div class="col-md-3 col-sm-3">
             <div class="single-widget">
             
             <h2 class="widget-title">Your Account</h2>
@@ -50,7 +53,8 @@
                 </ul>
             </div>
             </div>
-            </div>
-
+            </div>';
+        }
+        ?>
     </div>
 </div>
