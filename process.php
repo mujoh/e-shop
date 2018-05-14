@@ -29,4 +29,12 @@
 		$queryUpdate = "UPDATE products SET product_name='$nameUpdate', product_price='$priceUpdate', product_quantity='$quantityUpdate', product_comment='$detailsUpdate' WHERE product_id=".$idUpdate;
 		mysqli_query($con, $queryUpdate);
 	}
+
+	else if($action == "delete")
+	{
+		$id = $_POST['id'];
+		
+		$queryDelete = "DELETE FROM products WHERE product_id=".$id;
+		mysqli_query($con, $queryDelete);
+	}
 ?>
