@@ -49,7 +49,4 @@
 			include_once('view/carttable.html');
 		?>
 	</div>
-</div>
-
-</body>
-</html>
+</div
