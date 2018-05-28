@@ -390,10 +390,6 @@ div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-righ
 	font-weight:bold;
 }
 
-.nav.nav-tabs:active {
-	background-color:black;
-}
-
 #sidebar li a:hover {
 	color:white;
 }
