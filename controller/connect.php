@@ -1,5 +1,5 @@
 <?php
-	$con = mysqli_connect("localhost:3305", "root", "", "electronicdb");
+	$con = mysqli_connect("localhost", "root", "", "electronicdb");
 	
 	if (mysqli_connect_errno())
 	{

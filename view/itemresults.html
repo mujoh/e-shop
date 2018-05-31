@@ -1,5 +1,32 @@
 <div class="span9" style="text-align:center">
-		 
+		
+    <?php
+        $name = $_GET['id'];
+        $total = "SELECT * FROM products";
+        $count = mysqli_query($con, $total);
+        $nr = mysqli_num_rows($count);
+        $items_per_page = 9;
+        $totalPages = ceil($nr/$items_per_page);
+        if(isset($_GET['page']) && !empty($_GET['page']))
+        {
+            $page = $_GET['page'];
+        }
+        else
+                $page = 1;
+        $offset = ($page - 1) * $items_per_page;
+        $query = "SELECT * FROM products WHERE product_name='$name' LIMIT $items_per_page OFFSET $offset";
+        $result = mysqli_query($con, $query);
+        $row_count = mysqli_num_rows($result);
+        echo '<div class="row">';
+        while($row = mysqli_fetch_array($result))
+        {
+            $id = $row['product_id'];
+            $image = $row['product_image'];
+            $fake = "C:fakepath";
+            $replaced = str_replace($fake, "", $image);
+            $image_src = "img/".$replaced;
+    ?>
+        
         <div class="col-md-4" style="margin-top:12px;">
             <form method="post" action="processcart.php?action=add&id=<?php echo $id; ?>">
                 <div class="itemBox">
@@ -7,8 +34,8 @@
                         <img src='<?php echo $image_src;  ?>' >
                     </a>
                     <div class="itemCaption" >
-                        <h5>Product Name</h5>
-                        <p>250 KM</p>
+                        <h5><?php echo $row["product_name"];?></h5>
+                        <p><?php echo $row["product_price"]?> KM</p>
                         
                         <input type="hidden" name="hidden_name" value="<?php echo $row["product_name"]; ?>">
                         <input type="hidden" name="hidden_price" value="<?php echo $row["product_price"]; ?>">
@@ -20,5 +47,19 @@
                 </div>
             </form>
         </div>
+
+        <?php
+        }
+        echo '</div>';
+        echo "<div class='row pagination'>";
+            for($i = 1; $i <= $totalPages; $i++)
+            {
+                if($i == $page)
+                    echo '<a class="active">'. $i . '</a>';
+                else
+                    echo '<a href="/stranicahosting/index.php?page=' . $i . '">'.$i. '</a>';
+            }
+            echo "</div>";
+        ?>
     </ul>
 </div>
