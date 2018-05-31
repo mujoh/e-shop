@@ -37,4 +37,23 @@
 		$queryDelete = "DELETE FROM products WHERE product_id=".$id;
 		mysqli_query($con, $queryDelete);
 	}
+
+	else if($action=="placeorder")
+	{
+		$total = $_POST['total'];
+		$name = $_POST['name'];
+		$uid = $_POST['uid'];
+		$firstname = $_POST['firstname'];
+		$lastname = $_POST['lastname'];
+		$street = $_POST['street'];
+		$city = $_POST['city'];
+		$country = $_POST['country'];
+		$quantity = $_POST['quantity'];
+		
+		echo $name;
+		
+		$date = date("Y-m-d");
+		$queryPlace = "INSERT INTO orders(user_id, name, surname, address, city, country, item, quantity, date, total) VALUES('$uid', '$firstname', '$lastname', '$street', '$city', '$country', '$name', '$quantity', '$date', '$total')";
+		mysqli_query($con, $queryPlace);
+	}
 ?>
